@@ -50,7 +50,21 @@ class BusinessController extends Controller
 
     public function update(Request $request, Business $business)
     {
+        $request->validate([
+            'name' => 'required',
+            'ward_region' => 'required'
+        ],
+        [
+            'name.required' => 'Jina la biashara latakiwa',
+            'ward_region.required' => 'Tafadhali andika kata na mkoa vya biashara yako',
+        ]);
 
+        $business->update([
+            'name' => $request->name,
+            'ward_region' => $request->ward_region,
+        ]);
+
+        return back()->with('success', 'Jina la biashara limebadilishwa');
     }
 
     public function destroy(Business $business)

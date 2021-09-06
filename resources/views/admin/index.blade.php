@@ -13,7 +13,7 @@
             </div>
         </div>
     </div>
-    <div class="row">
+    <div class="row offset-md-2">
         <div class="col-md-4 stretch-card grid-margin grid-margin-md-0">
             <div class="card data-icon-card-primary">
                 <div class="card-body">
@@ -45,25 +45,6 @@
                         <div class="col-4 ">
                            <span class="badge badge-primary">
                                <h3 class="py-3">{{$users}}</h3>
-                           </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-4 stretch-card grid-margin grid-margin-md-0">
-            <div class="card data-icon-card-primary">
-                <div class="card-body">
-                    <div class="row d-flex align-items-center">
-                        <div class="col-8 text-white">
-                            <p class="card-title text-white">Number of Businesses</p>
-
-                            <p class="text-white font-weight-500 mb-0">The total number of active businesses registered to date:</p>
-                        </div>
-                        <div class="col-4 ">
-                           <span class="badge badge-info d-flex align-items-center justify-content-center">
-                               <h3 class="py-3">34040</h3>
                            </span>
                         </div>
                     </div>

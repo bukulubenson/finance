@@ -56,7 +56,7 @@ class SMS
         if ($response === FALSE)
         {
             abort(500);
-//            echo $response;
+            echo $response;
 
             die(curl_error($ch));
         }

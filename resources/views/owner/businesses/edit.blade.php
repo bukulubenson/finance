@@ -49,6 +49,16 @@
                                 </span>
                                @enderror
                            </div>
+
+                           <div class="form-group col-md-12">
+                               <label for="Name">Kata - Mkoa</label>
+                               <input type="text" class="form-control @error(old('ward_region')) is-invalid @enderror" name="ward_region" value="{{old('ward_region') ?? $business->ward_region ?? ''}}" id="ward_region">
+                               @error('ward_region')
+                               <span class="invalid-feedback" role="alert">
+                                   <strong>{{ $message }}</strong>
+                                </span>
+                               @enderror
+                           </div>
                        </div>
 
                         <button type="submit" class="btn btn-primary mr-2">Hifadhi</button>

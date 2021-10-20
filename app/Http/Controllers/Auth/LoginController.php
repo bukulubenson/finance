@@ -41,17 +41,16 @@ class LoginController extends Controller
 
     protected function redirectTo()
     {
-        if (auth()->user()->role_id === 1) {
-            return $this->redirectTo = '/admin';
+        $role = auth()->user()->role_id;
+        switch ($role){
+            case 1:
+                return $this->redirectTo = '/admin';
+            case 2:
+                return $this->redirectTo = '/owner/businesses';
+            default:
+                return redirect('/home');
         }
 
-        elseif (auth()->user()->role_id === 2) {
-            return $this->redirectTo = '/owner/businesses';
-        }
-
-        else{
-            return redirect('/home');
-        }
     }
 
     public function username()
